@@ -10,6 +10,7 @@ import Layout from './components/layouts/Layout'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ServicePage from './pages/ServicePage'
+import ContactPage from './pages/ContactPage'
 
 const MyRouters = () => {
     return (
@@ -29,6 +30,7 @@ const MyRouters = () => {
                     <Route path="/home" element={<HomePage />} />
                     <Route path='/About' element={<AboutPage />}/>
                     <Route path='/services' element={<ServicePage />}/>
+                    <Route path='/contact' element={<ContactPage />}/>
                     <Route path='*' element={<PageNotFound />} />
                 </Route>
             </Routes>
