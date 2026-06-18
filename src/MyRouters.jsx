@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 
 import First from './First'
 import Second from './Second'
@@ -14,7 +14,7 @@ import ContactPage from './pages/ContactPage'
 
 const MyRouters = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route element={<Layout />}>
                     {/* Landing page */}
@@ -34,7 +34,7 @@ const MyRouters = () => {
                     <Route path='*' element={<PageNotFound />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
