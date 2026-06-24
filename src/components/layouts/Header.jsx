@@ -1,28 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <>
-        <div className="flex bg-slate-300 flex-col md:flex-row py-1.25">
-            <div className="logo w-full md:w-1/4 text-center text-2xl font-bold text-blue-700 cursor-pointer">STORE FRONT</div>
-            <div className="sear w-full md:w-1/4">
-                <input type="search" name="" id="" />
-                <button>Search</button>
-                
-            </div>
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-slate-950/95 text-white shadow-lg shadow-slate-950/10 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-6">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <div className="text-xl font-bold tracking-[0.25em] text-white">STORE FRONT</div>
+            <p className="mt-1 text-xs uppercase tracking-[0.35em] text-slate-400">Simple React demo</p>
+          </div>
         </div>
-        <div className='bg-slate-200 sticky top-0 z-99'>
-            <div className="flex justify-evenly w-1/2 m-auto py-4">
-				<Link to='/home' className='hover:text-slate-900'>Home</Link>
-				<Link to='/about' className='hover:text-slate-900'>ABOUT</Link>
-				<Link to='/services' className='hover:text-slate-900'>SERVICES</Link>
-              <Link to='/counter' className='hover:text-slate-900'>COUNTER</Link>
-				<Link to='/blogs' className='hover:text-slate-900'>BLOGS</Link>
-				<Link to='/contact' className='hover:text-slate-900'>CONTACT</Link>
-			</div>
-        </div>
-    </>
+
+        <nav aria-label="Primary" className="flex flex-wrap items-center gap-2 md:justify-end">
+				<NavLink to='/home' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white'}`}>
+					Home
+				</NavLink>
+				<NavLink to='/about' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white'}`}>
+					About
+				</NavLink>
+				<NavLink to='/services' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white'}`}>
+					Services
+				</NavLink>
+				<NavLink to='/counter' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-emerald-400 text-slate-950 shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white'}`}>
+					Counter
+				</NavLink>
+				<NavLink to='/contact' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white'}`}>
+					Contact
+				</NavLink>
+			</nav>
+      </div>
+    </header>
   )
 }
 
