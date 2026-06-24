@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ServicePage from './pages/ServicePage'
 import ContactPage from './pages/ContactPage'
+import CounterPage from './pages/CounterPage'
 
 const MyRouters = () => {
     return (
@@ -31,6 +32,7 @@ const MyRouters = () => {
                     <Route path='/About' element={<AboutPage />}/>
                     <Route path='/services' element={<ServicePage />}/>
                     <Route path='/contact' element={<ContactPage />}/>
+                    <Route path='/counter' element={<CounterPage />}/>
                     <Route path='*' element={<PageNotFound />} />
                 </Route>
             </Routes>
