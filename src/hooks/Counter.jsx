@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 const Counter = () => {
   const [count, setCount] = useState(0)
   const [data, setData] = useState(0)
+
+  useEffect(() =>{
+    alert("Value Updated");
+  }, [])
 
   return (
     <>

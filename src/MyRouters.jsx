@@ -12,6 +12,7 @@ import AboutPage from './pages/AboutPage'
 import ServicePage from './pages/ServicePage'
 import ContactPage from './pages/ContactPage'
 import CounterPage from './pages/CounterPage'
+import Classroom from './pages/Classroom'
 
 const MyRouters = () => {
     return (
@@ -34,6 +35,7 @@ const MyRouters = () => {
                     <Route path='/contact' element={<ContactPage />}/>
                     <Route path='/counter' element={<CounterPage />}/>
                     <Route path='*' element={<PageNotFound />} />
+                    <Route path="/classroom" element={<Classroom />} />
                 </Route>
             </Routes>
         </HashRouter>
