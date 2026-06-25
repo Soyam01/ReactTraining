@@ -35,9 +35,13 @@ const MyRouters = () => {
                     <Route path='/services' element={<ServicePage />}/>
                     <Route path='/contact' element={<ContactPage />}/>
                     <Route path='/counter' element={<CounterPage />}/>
-                    <Route path='*' element={<PageNotFound />} />
                     <Route path="/classroom" element={<Classroom />} />
                     <Route path='/data' element={<DataFetch/>}/>
+
+                    <Route path='/post/:id'  element={<Post/>}/>
+
+                    <Route path='/post/*'  element={<PageNotFound/>}/>
+                    <Route path='*' element={<PageNotFound />} />
                 </Route>
             </Routes>
         </HashRouter>
