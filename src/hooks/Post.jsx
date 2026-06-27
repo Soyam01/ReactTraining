@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 const Post = () => {
@@ -12,7 +13,7 @@ const Post = () => {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response) => setPost(response.data))
         .catch(error => console.log(error))
-    }, [])
+    }, [id])
   return (
     <div className='p-5 m-5 w-1/2 mx-auto shadow-lg'>
         <h2>{id}. {post.title}</h2>

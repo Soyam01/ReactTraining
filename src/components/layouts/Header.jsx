@@ -1,15 +1,6 @@
-import React, { useContext, useState } from 'react'
-import { BsCart, BsPersonPlus } from 'react-icons/bs'
-import { RiLoginBoxFill } from 'react-icons/ri'
-import { BsSearch } from 'react-icons/bs'
-import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 import { MyThemeContext } from '../../App'
-
-const navLinks = [
-    { label: 'Home', to: '/' },
-    { label: 'About Us', to: '/about' },
-    { label: 'Services', to: '/services' },
-]
 
 const Header = () => {
 
@@ -52,6 +43,9 @@ const Header = () => {
 				</NavLink>
 				<NavLink to='/contact' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? (theme === 'light' ? 'bg-slate-900 text-white' : 'bg-white text-slate-950') : (theme === 'light' ? 'text-slate-600 hover:bg-slate-100' : 'text-slate-300 hover:bg-slate-800 hover:text-white')}`}>
 					Contact
+				</NavLink>
+				<NavLink to='/store' className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition ${isActive ? 'bg-emerald-400 text-slate-950 shadow-sm' : (theme === 'light' ? 'text-slate-600 hover:bg-slate-100' : 'text-slate-300 hover:bg-slate-800 hover:text-white')}`}>
+					Store
 				</NavLink>
 				<button 
 					onClick={toggleTheme}

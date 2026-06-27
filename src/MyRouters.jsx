@@ -1,5 +1,4 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 
 import First from './First'
 import Second from './Second'
@@ -14,6 +13,8 @@ import ContactPage from './pages/ContactPage'
 import CounterPage from './pages/CounterPage'
 import Classroom from './pages/Classroom'
 import DataFetch from './hooks/DataFetch'
+import Post from './hooks/Post'
+import StorePage from './pages/StorePage'
 
 const MyRouters = () => {
     return (
@@ -37,6 +38,7 @@ const MyRouters = () => {
                     <Route path='/counter' element={<CounterPage />}/>
                     <Route path="/classroom" element={<Classroom />} />
                     <Route path='/data' element={<DataFetch/>}/>
+                    <Route path='/store' element={<StorePage/>}/>
 
                     <Route path='/post/:id'  element={<Post/>}/>
 
