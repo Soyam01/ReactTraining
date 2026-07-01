@@ -15,6 +15,7 @@ import Classroom from './pages/Classroom'
 import DataFetch from './hooks/DataFetch'
 import Post from './hooks/Post'
 import StorePage from './pages/StorePage'
+import ReduxCounter from './pages/ReduxCounter'
 
 const MyRouters = () => {
     return (
@@ -41,6 +42,7 @@ const MyRouters = () => {
                     <Route path='/store' element={<StorePage/>}/>
 
                     <Route path='/post/:id'  element={<Post/>}/>
+                    <Route path='reduxCounter' element= {<ReduxCounter/>}/>
 
                     <Route path='/post/*'  element={<PageNotFound/>}/>
                     <Route path='*' element={<PageNotFound />} />
