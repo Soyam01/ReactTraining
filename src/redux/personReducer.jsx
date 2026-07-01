@@ -1,12 +1,13 @@
 const initialData = {
-    person : '',
-    phone: ''
+    name : 'RAM',
+    phone: '01234'
 }
 
 const personReducer = (state = initialData, action) => {
 
     switch (action.type){
-        case "UPADATE_PERSON":
+        case "UPDATE_NAME":
+            
     
         case "UPDATE_PHONE":
 
